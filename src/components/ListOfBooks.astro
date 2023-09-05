@@ -1,0 +1,16 @@
+---
+import {books} from '../data/books'
+import BookItem from './BookItem.astro'
+
+---
+<ul class="grid gid-cols-2 md:grid-cols-3 gap-3">
+    {    
+        books.map(({id, title, img, desc, author}) =>{
+            return(
+                <li class=" px-4">
+                    <BookItem id={id} title={title} img={img}/>
+                </li>
+            )
+        })
+    }
+</ul>
